@@ -8,11 +8,11 @@ on:
 
 jobs:
   run:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     container: universalteam/db
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v4
 
     - name: Delete old pages and QRs
       run: rm -rf docs/_3ds/* docs/_ds/* docs/assets/images/qr/*.png docs/assets/images/qr/nightly/*.png docs/assets/images/qr/prerelease/*.png
